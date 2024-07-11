@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Cuotas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Tasas</h1>
+        <form id="loan-form">
+            <div class="form-group">
+                <label for="loan-type">Tipo de Préstamo:</label>
+                <select id="loan-type">
+                    <option value="frances">Sistema Francés</option>
+                    <option value="aleman">Sistema Alemán</option>
+                    <option value="directo">Pago Directo</option>
+                    <option value="tasa_adelantada">Tasa Adelantada</option>
+                    <option value="tasa_vencida">Tasa Vencida</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="capital">Capital:</label>
+                <input type="number" id="capital" required>
+            </div>
+            <div class="form-group">
+                <label for="interest-rate">Tasa de Interés Mensual (%):</label>
+                <input type="number" id="interest-rate" step="0.01" required>
+            </div>
+            <div class="form-group" id="cuotas-group">
+                <label for="num-cuotas">Número de Cuotas:</label>
+                <input type="number" id="num-cuotas">
+            </div>
+            <div class="form-group" id="plazo-group" style="display: none;">
+                <label for="loan-term">Plazo del Préstamo (días):</label>
+                <input type="number" id="loan-term">
+            </div>
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="result">
+            <h2>Resultado</h2>
+            <div id="resultado"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
